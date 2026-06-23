@@ -113,7 +113,7 @@ html, body {
   position: absolute;
   left: 2%;
   bottom: 26%;
-  width: 100%;
+  width: 90%;
   height: auto;
   z-index: 6;
   pointer-events: none;
