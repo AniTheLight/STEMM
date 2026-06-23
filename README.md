@@ -15,9 +15,9 @@ stemm-archives/
     ├── correct_img.png
     ├── main_bg.png
     ├── pink_bg.png
-    ├── tab_dk.png
-    ├── tab_yk.png
-    ├── tab_fk.png
+    ├── tab_dk.svg
+    ├── tab_yk.svg
+    ├── tab_fk.svg
     └── folder_front.png
 ```
 
@@ -35,9 +35,9 @@ paths. Replace each one with the real filename from the original upload bundle:
 | `uploads/correct_img.png` | `correct_img-1782231574124.png`                  |
 | `uploads/main_bg.png`     | `main_bg-1782231595892.png`                      |
 | `uploads/pink_bg.png`     | `pink_bg-1782231579657.png`                      |
-| `uploads/tab_dk.png`      | `tab_dk.png`                                     |
-| `uploads/tab_yk.png`      | `tab_yk.png`                                     |
-| `uploads/tab_fk.png`      | `tab_fk.png`                                     |
+| `uploads/tab_dk.svg`      | `tab_dk.svg`                                     |
+| `uploads/tab_yk.svg`      | `tab_yk.svg`                                     |
+| `uploads/tab_fk.svg`      | `tab_fk.svg`                                     |
 | `uploads/folder_front.png`| `folder_front.png`                               |
 
 ## Configuration
