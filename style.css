@@ -111,9 +111,9 @@ html, body {
 
 .folder-front {
   position: absolute;
-  left: 20%;
-  bottom: -2%;
-  width: 60%;
+  left: 2%;
+  bottom: 26%;
+  width: 100%;
   height: auto;
   z-index: 6;
   pointer-events: none;
