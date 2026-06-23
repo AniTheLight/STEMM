@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEMM Archives</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== GREEN / MAIN (BROS) ===================== -->
+  <div id="screen-main" class="screen screen-main">
+    <div id="main-inner" class="main-inner">
+
+      <!-- Grid-paper header with folder tabs -->
+      <div class="grid-header">
+
+        <!-- Incognito button (→ password screen) -->
+        <button id="btn-incognito" class="btn-incognito">Incognito</button>
+
+        <!-- Tab images (visual, lifted by hover via JS) -->
+        <img id="tab-img-dk" class="tab-img tab-dk" src="uploads/tab_dk.png" alt="DK" draggable="false">
+        <img id="tab-img-yk" class="tab-img tab-yk" src="uploads/tab_yk.png" alt="YK" draggable="false">
+        <img id="tab-img-fk" class="tab-img tab-fk" src="uploads/tab_fk.png" alt="FK" draggable="false">
+
+        <!-- Front folder face -->
+        <img id="folder-front" class="folder-front" src="uploads/folder_front.png" alt="The STEMM Archives" draggable="false">
+
+        <!-- Invisible tab hotspot buttons (click + hover lift) -->
+        <button id="btn-tab-dk" class="tab-hotspot tab-hotspot-dk" title="DK" aria-label="Open DK tab"></button>
+        <button id="btn-tab-yk" class="tab-hotspot tab-hotspot-yk" title="YK" aria-label="Open YK tab"></button>
+        <button id="btn-tab-fk" class="tab-hotspot tab-hotspot-fk" title="FK" aria-label="Open FK tab"></button>
+      </div>
+
+      <!-- Lower strip: main background image cropped below the folder -->
+      <div class="main-bg-strip">
+        <img id="main-bg-img" src="uploads/main_bg.png" alt="" draggable="false">
+      </div>
+
+    </div>
+  </div><!-- /screen-main -->
+
+
+  <!-- ===================== PINK / COOL (SISTERS) ===================== -->
+  <div id="screen-cool" class="screen screen-cool">
+    <div id="cool-inner" class="cool-inner">
+
+      <!-- Full-bleed pink background -->
+      <img id="cool-bg-img" class="cool-bg" src="uploads/pink_bg.png" alt="The better STEMM Archives" draggable="false">
+
+      <!-- Return to main (baked into bg image) -->
+      <button id="btn-return-bro" class="btn-return-bro" title="Return to brodom" aria-label="Return to main"></button>
+
+      <!-- Pink-side folder tabs -->
+      <button id="btn-cool-mq" class="cool-tab-btn cool-tab-mq" title="MQ" aria-label="Open MQ tab"></button>
+      <button id="btn-cool-si" class="cool-tab-btn cool-tab-si" title="SI" aria-label="Open SI tab"></button>
+
+      <!-- "who is it?" video trigger -->
+      <button id="btn-who-is" class="btn-who-is" title="who is it?" aria-label="Watch video"></button>
+
+      <!-- "lost babygurl? Yes" external link -->
+      <a class="link-lost"
+         href="https://www.youtube.com/watch?v=0cI4Ave91V0"
+         target="_blank"
+         rel="noopener"
+         title="Yes"
+         aria-label="Yes — external link"></a>
+
+    </div>
+  </div><!-- /screen-cool -->
+
+
+  <!-- ===================== PASSWORD ===================== -->
+  <div id="screen-password" class="screen screen-password">
+    <div id="pw-inner" class="pw-inner">
+
+      <!-- Dynamic background (idle / wrong / bros / cooldown) -->
+      <img id="pw-bg-img" class="pw-bg" src="uploads/pw_bg.png" alt="Enter password" draggable="false">
+
+      <!-- Password input (sits over the baked pill graphic) -->
+      <input id="pw-input"
+             class="pw-input"
+             type="text"
+             placeholder="Enter password"
+             autocomplete="off"
+             autofocus>
+
+      <!-- Cooldown countdown (hidden unless locked out) -->
+      <div id="cooldown-text" class="pw-cooldown-text" style="display:none;"></div>
+
+      <!-- Back button -->
+      <button id="btn-back-pw" class="btn-back-pw">&larr; BACK</button>
+
+    </div>
+  </div><!-- /screen-password -->
+
+
+  <!-- ===================== TAB PLACEHOLDER ===================== -->
+  <div id="screen-tab" class="screen screen-tab">
+    <div id="tab-inner" class="tab-placeholder-inner">
+      <div class="tab-eyebrow">THE STEMM ARCHIVES</div>
+      <div id="tab-label" class="tab-big-label"></div>
+      <div class="tab-drop-zone">
+        DROP THE <strong id="tab-label-2"></strong> PAGE<br>BACKGROUND HERE
+      </div>
+      <button id="btn-back-tab" class="btn-back-tab">&larr; BACK</button>
+    </div>
+  </div><!-- /screen-tab -->
+
+
+  <!-- ===================== SUCCESS OVERLAY ===================== -->
+  <!--
+    Shown after a correct password. Hidden by default (display:none via inline style);
+    JS switches it to display:flex for the 2.5s success sequence.
+  -->
+  <div id="success-overlay" class="overlay-success" style="display:none;">
+    <div class="overlay-success-inner">
+      <img id="success-img" src="uploads/correct_img.png" alt="Correct! Welcome to the cool side" draggable="false">
+    </div>
+  </div>
+
+
+  <!-- ===================== VIDEO MODAL ===================== -->
+  <div id="video-modal" class="modal-backdrop" style="display:none;">
+    <div class="modal-video-wrap" id="video-modal-inner">
+      <iframe id="video-iframe"
+              src=""
+              title="who is it?"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+    <button id="btn-modal-close" class="btn-modal-close" aria-label="Close">&times;</button>
+  </div>
+
+
+  <!-- ===================== BUBBLE LAYER ===================== -->
+  <!-- Populated dynamically by JS during the success animation -->
+  <div id="bubble-layer" class="bubble-layer" style="display:none;"></div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
