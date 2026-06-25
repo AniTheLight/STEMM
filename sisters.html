@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The STEMM Archives - Sisters Side</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('sisters-bg.png');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-btns">
+    <button class="pill-btn purple" onclick="window.location.href='index.html'">Return to brodom</button>
+  </div>
+
+  <div class="tabs-container">
+    <div class="tab purple">HQ</div>
+    <div class="tab purple" style="background:#6a3d90;color:#e8c8ff;">SI</div>
+  </div>
+
+  <div class="hero-banner purple">
+    <div class="hero-text">
+      <h1>welcome to the better<br><em>STEMM Archives</em></h1>
+    </div>
+  </div>
+
+  <div class="content-section" style="position:relative;">
+    <div class="deco-flower" style="right:60px;top:-20px;">flower1</div>
+    <div class="deco-flower" style="right:20px;top:40px;font-size:1.5rem;">flower2</div>
+
+    <div class="section-block">
+      <div class="big-italic purple-tint">You da real community</div>
+      <div class="mono-small purple-tint" style="margin-top:12px;">
+        LONG AGO, THE FOUR NATIONS LIVED TOGETHER IN HARMONY.<br>
+        THEN, EVERYTHING CHANGED WHEN THE PAKISTANIS ATTACKED
+      </div>
+      <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:9px;color:rgba(200,160,255,0.5);">SAMITA</div>
+
+      <div style="margin-top:30px;display:flex;gap:30px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <div style="width:100%;height:280px;border-radius:12px;background:rgba(180,120,255,0.08);display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:3rem;opacity:0.3;">placeholder for photo</span>
+          </div>
+        </div>
+        <div style="flex:0 0 200px;">
+          <div class="door-container" onclick="openGifModal()">
+            <div style="width:200px;height:250px;border-radius:12px;background:rgba(120,80,180,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(180,120,255,0.2);">
+              <span style="font-size:4rem;">door</span>
+              <span style="font-family:'Space Mono',monospace;font-size:9px;color:rgba(200,160,255,0.6);margin-top:8px;text-align:center;letter-spacing:0.08em;">SOMEONES AT THE DOOR</span>
+            </div>
+            <div class="door-label">who is it?</div>
+          </div>
+          <div class="click-hint" style="color:rgba(200,160,255,0.4);">tap to reveal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="hall-title" style="color:var(--purple-light);">the <em>hall of slay</em></div>
+      <div class="photo-strip">
+        <div class="strip-item" style="background:rgba(180,120,255,0.08);"><div class="label">SHUT UP BREV</div></div>
+        <div class="strip-item" style="background:rgba(180,120,255,0.08);"><div class="label">DAY 1</div></div>
+        <div class="strip-item" style="background:rgba(180,120,255,0.08);"><div class="label">STAY MOGGING KWEEN</div></div>
+        <div class="strip-item" style="background:rgba(180,120,255,0.08);"></div>
+        <div class="strip-item" style="background:rgba(180,120,255,0.08);"></div>
+        <div class="strip-item" style="background:rgba(180,120,255,0.08);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-section">
+    <div class="big-italic" style="font-size:2.6rem;">Dont get lost in the sauce</div>
+    <div class="mono-small" style="color:rgba(200,160,255,0.4);margin-top:14px;">
+      I WILL STAND BETWEEN THE HEAVENS AND THE EARTH, I WILL<br>
+      TELL YOU WHERE YOU ARE. DO YOU LOVE ME?!
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:40px;">
+      <button class="pill-btn purple" onclick="openModal('love-modal')">Submit your undying love</button>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <div class="footer-badge"><span style="font-size:2rem;">flower</span></div>
+    <div class="bubbles">
+      <div class="bubble" style="width:80px;height:80px;"></div>
+      <div class="bubble" style="width:50px;height:50px;animation-delay:0.5s;"></div>
+      <div class="bubble" style="width:120px;height:120px;animation-delay:1s;"></div>
+      <div class="bubble" style="width:40px;height:40px;animation-delay:1.5s;"></div>
+      <div class="bubble" style="width:70px;height:70px;animation-delay:0.8s;"></div>
+    </div>
+    <div class="lost-label">lost</div>
+    <div class="lost-name" style="color:var(--purple-light);">babygurl?</div>
+    <div style="margin-top:20px;">
+      <button class="pill-btn purple" onclick="openModal('directions-modal')">Yes</button>
+    </div>
+    <div class="footer-tagline" style="margin-top:40px;">STAY NAJBA MAXXING QUEEN</div>
+  </div>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="love-modal">
+    <div class="modal-box purple">
+      <button class="modal-close" onclick="closeModal('love-modal')">x</button>
+      <div class="modal-title">Submit your undying love</div>
+      <textarea id="love-text" placeholder="Tell them... do you love them?"></textarea>
+      <button class="modal-submit purple" onclick="submitModal('love-modal','love-text','love-confirm')">Submit</button>
+      <div class="modal-confirm" id="love-confirm" style="color:var(--purple-light);">LOVE SUBMITTED</div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="directions-modal">
+    <div class="modal-box purple">
+      <button class="modal-close" onclick="closeModal('directions-modal')">x</button>
+      <div class="modal-title">lost babygurl?</div>
+      <div class="directions-text">
+        You have found the <strong>Sisters Side</strong> of the STEMM Archives.<br><br>
+        You are exactly where you should be.<br><br>
+        Scroll up to vibe with the crew, check the hall of slay, and submit your undying love.<br><br>
+        If you are looking for the bros, hit <strong>Return to brodom</strong> up top.
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="gif-modal">
+    <div class="modal-box purple" style="text-align:center;">
+      <button class="modal-close" onclick="closeModal('gif-modal')">x</button>
+      <div class="modal-title">who is it?</div>
+      <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" alt="surprise gif" style="width:100%;border-radius:10px;display:block;">
+      <p style="color:rgba(200,160,255,0.5);font-family:'Space Mono',monospace;font-size:11px;margin-top:10px;letter-spacing:0.06em;">ITS THE VIBE</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

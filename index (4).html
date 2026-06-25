@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The STEMM Archives</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('bro-bg.png');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-btns">
+    <button class="pill-btn green" onclick="openModal('glaze-modal')">Glaze Submissions</button>
+    <button class="pill-btn green" onclick="window.location.href='password.html'">Incognito</button>
+  </div>
+
+  <div class="tabs-container">
+    <div class="tab green">DK</div>
+    <div class="tab green" style="background:#c8352a;color:#fff;">YK</div>
+    <div class="tab green" style="background:#6a4fc8;color:#fff;">FK</div>
+  </div>
+
+  <div class="hero-banner green">
+    <div class="hero-text">
+      <div class="sub">A DIGITIZED COLLECTION OF THINGS AND CORE MEMORIES.</div>
+      <h1>welcome to<br><em>The STEMM Archives</em></h1>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-block">
+      <div class="two-col">
+        <div>
+          <div class="big-italic green-tint">Promise its not a cult</div>
+          <div class="mono-small green-tint" style="margin-top:12px;">
+            OR A PYRAMID SCHEME...<br><br>
+            THIS HAS BEEN A YEAR OF BROMANCE, UNSERIOUS<br>
+            FRESHERS AND <s>DICTATORSHIP</s> STRONG LEADERSHIP<br><br>
+            NOT TO MENTION THE INSANE LINEUP OF EVENTS,<br>
+            ONLY POSSIBLE BECAUSE OF THE CRACKED EXECS
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <div style="width:100%;height:220px;border-radius:12px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:3rem;opacity:0.3;">placeholder for photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="quote-block" style="margin-bottom:16px;">AND THE OSCAR GOES TO...</div>
+      <div class="hall-title">the <em>hall of fame</em></div>
+      <div class="photo-strip">
+        <div class="strip-item"><div class="label">TROLLEY WAS THE REAL MVP</div></div>
+        <div class="strip-item"><div class="label">ABSOLUTE CINEMA</div></div>
+        <div class="strip-item"><div class="label">WHATEVER THIS IS</div></div>
+        <div class="strip-item"><div class="label">INSPIRING CHILDREN IS GOOD BUT AURA FARMING IS BETTER</div></div>
+        <div class="strip-item"></div>
+        <div class="strip-item"><div class="label">TO BE CONTINUED</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-section">
+    <div class="big-italic" style="font-size:2.4rem;">Brother must be a donut</div>
+    <div class="mono-small" style="color:rgba(255,255,255,0.35);margin-top:4px;">THE WAY HES GETTING GLAZED</div>
+    <div style="display:flex;justify-content:flex-end;margin-top:30px;">
+      <div class="quote-block" style="max-width:320px;text-align:right;border-left:none;border-right:2px solid rgba(255,255,255,0.1);padding-left:0;padding-right:16px;">
+        "You're the best of all of us, You're the best of all of us, Miles."
+      </div>
+    </div>
+    <div style="margin-top:40px;text-align:right;">
+      <button class="pill-btn green" onclick="openModal('compliment-modal')" style="font-size:12px;">Post a compliment</button>
+    </div>
+    <div class="mono-small" style="color:rgba(255,255,255,0.2);margin-top:20px;text-align:right;">#MENSMENTALHEALTH</div>
+  </div>
+
+  <div class="footer-section">
+    <div class="footer-badge"><span style="font-size:2rem;">plant</span></div>
+    <div class="lost-label">lost</div>
+    <div class="lost-name">Sisters?</div>
+    <div style="margin-top:16px;">
+      <div class="mono-small" style="color:rgba(255,255,255,0.4);">WE ARE INCOGNITO<br>HAYAMAXXING</div>
+    </div>
+    <div class="footer-tagline">STAY NAJBA MAXXING TEAM</div>
+  </div>
+
+  <div class="modal-overlay" id="glaze-modal">
+    <div class="modal-box green">
+      <button class="modal-close" onclick="closeModal('glaze-modal')">x</button>
+      <div class="modal-title">Glaze Submissions</div>
+      <textarea id="glaze-text" placeholder="Drop your glaze here..."></textarea>
+      <button class="modal-submit green" onclick="submitModal('glaze-modal','glaze-text','glaze-confirm')">Submit</button>
+      <div class="modal-confirm" id="glaze-confirm">GLAZED AND SUBMITTED</div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="compliment-modal">
+    <div class="modal-box green">
+      <button class="modal-close" onclick="closeModal('compliment-modal')">x</button>
+      <div class="modal-title">Post a compliment</div>
+      <textarea id="compliment-text" placeholder="Say something nice... go on"></textarea>
+      <button class="modal-submit green" onclick="submitModal('compliment-modal','compliment-text','compliment-confirm')">Post it</button>
+      <div class="modal-confirm" id="compliment-confirm">COMPLIMENT DELIVERED</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
